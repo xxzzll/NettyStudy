@@ -1,4 +1,4 @@
-package com.mashibing.io.nio;
+package com.huawei.io.nio;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -54,7 +54,7 @@ public class PoolServer {
      */
     @SuppressWarnings("unchecked")
     public void listen() throws IOException {
-        // 轮询访问selector  
+        // 轮询访问selector
         while (true) {
             //
             selector.select();

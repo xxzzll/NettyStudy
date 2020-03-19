@@ -1,4 +1,4 @@
-package com.mashibing.io.nio;
+package com.huawei.io.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -10,6 +10,9 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * @description NIO single-Thread Model
+ */
 public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocketChannel ssc = ServerSocketChannel.open();

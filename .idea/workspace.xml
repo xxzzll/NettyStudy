@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1dc2dae9-a079-4788-852c-22b69e115456" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/documents/IO.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/AIO异步非阻塞编码实现.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/AIO模型.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/BIO原理.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/NIO-reactor模型.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/NIO-reactor编码实现.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/NIO-single-Thread模型.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/NIO-single-Thread编码实现.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/同步异步阻塞非阻塞的区分.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/同步非阻塞.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/异步和阻塞相对的模型.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/异步阻塞.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documents/images/异步非阻塞.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/bio/BIOEchoClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/bio/BIOEchoServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/bio/entities/HostInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/bio/utils/InputUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/aio/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/aio/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/aio/ServerWithThreadGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/aio/ServerWithThreadGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/bio/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/bio/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/nio/PoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/nio/PoolServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/io/nio/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/io/nio/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/netty/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/netty/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mashibing/netty/HelloNetty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/netty/HelloNetty.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyStudy" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyStudy" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyStudy" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyStudy" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ZLIblDQG1t9S5jXwpm5UYrsdzp" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/documents/images" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documents/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/documents/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/mashibing/io/bio" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1dc2dae9-a079-4788-852c-22b69e115456" name="Default Changelist" comment="" />
+      <created>1584612020693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584612020693</updated>
+      <workItem from="1584612022406" duration="10195000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

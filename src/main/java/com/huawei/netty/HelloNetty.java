@@ -1,6 +1,5 @@
-package com.mashibing.netty;
+package com.huawei.netty;
 
-import com.mashibing.io.aio.Server;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
