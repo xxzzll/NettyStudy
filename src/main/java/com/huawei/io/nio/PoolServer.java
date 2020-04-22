@@ -1,5 +1,7 @@
 package com.huawei.io.nio;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -12,15 +14,14 @@ import java.util.Iterator;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+@Slf4j
 public class PoolServer {
 
     ExecutorService pool = Executors.newFixedThreadPool(50);
 
     private Selector selector;
-    //中文测试
 
     /**
-     *
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
@@ -30,7 +31,6 @@ public class PoolServer {
     }
 
     /**
-     *
      * @param port
      * @throws IOException
      */
@@ -49,7 +49,6 @@ public class PoolServer {
     }
 
     /**
-     *
      * @throws IOException
      */
     @SuppressWarnings("unchecked")
@@ -76,9 +75,9 @@ public class PoolServer {
                     //
                 } else if (key.isReadable()) {
                     //
-                    key.interestOps(key.interestOps()&(~SelectionKey.OP_READ));
+                    key.interestOps(key.interestOps() & (~SelectionKey.OP_READ));
                     //
-                    pool.execute(new ThreadHandlerChannel(key));
+                    pool.execute(new HandlerChannelThread(key));
                 }
             }
         }
@@ -86,47 +85,62 @@ public class PoolServer {
 }
 
 /**
- *
- * @param
- * @throws IOException
+ * 处理客户端请求的数据，并回复状态码
  */
-class ThreadHandlerChannel extends Thread{
+@Slf4j
+class HandlerChannelThread extends Thread {
     private SelectionKey key;
-    ThreadHandlerChannel(SelectionKey key){
-        this.key=key;
+
+    HandlerChannelThread(SelectionKey key) {
+        this.key = key;
     }
+
     @Override
     public void run() {
-        //
         SocketChannel channel = (SocketChannel) key.channel();
-        //
         ByteBuffer buffer = ByteBuffer.allocate(1024);
-        //
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
             int size = 0;
             while ((size = channel.read(buffer)) > 0) {
                 buffer.flip();
-                baos.write(buffer.array(),0,size);
+                baos.write(buffer.array(), 0, size);
                 buffer.clear();
             }
-            baos.close();
-            //
-            byte[] content=baos.toByteArray();
-            ByteBuffer writeBuf = ByteBuffer.allocate(content.length);
-            writeBuf.put(content);
-            writeBuf.flip();
-            channel.write(writeBuf);//
-            if(size==-1){
 
+            //************** 接收到的消息
+            byte[] content = baos.toByteArray();
+            String msg = new String(content, "UTF-8");
+            log.info("client:" + msg);
+
+            //************** 返回 200 状态码
+            ByteBuffer writeBuf = ByteBuffer.allocate(156);
+            writeBuf.put("200".getBytes());
+            writeBuf.flip();
+            channel.write(writeBuf);
+            if (size == -1) {
                 channel.close();
-            }else{
-                //
-                key.interestOps(key.interestOps()|SelectionKey.OP_READ);
+            } else {
+                key.interestOps(key.interestOps() | SelectionKey.OP_READ);
                 key.selector().wakeup();
             }
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            log.info(e.getMessage());
+        } finally {
+            if(baos != null){
+                try {
+                    baos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (channel != null) {
+                try {
+                    channel.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
